@@ -1,0 +1,3 @@
+START=yes
+OPTS="-h <%= node['statsfeeder']['esx_host'] %> -u <%= node['statsfeeder']['user'] %> -p <%= node['statsfeeder']['password'] %> -c <%= node['statsfeeder']['install_dir'] %>/config/graphiteConfig.xml"
+INSTALL_DIR=<%= node['statsfeeder']['install_dir'] %>

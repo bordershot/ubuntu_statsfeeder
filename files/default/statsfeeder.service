@@ -1,0 +1,14 @@
+[Unit]
+Description=statsfeeder
+After=syslog.target network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/statsfeeder.pid
+EnvironmentFile=-/etc/default/statsfeeder
+ExecStart=/usr/sbin/postfix start
+ExecReload=/usr/sbin/postfix reload
+ExecStop=/usr/sbin/postfix stop
+
+[Install]
+WantedBy=multi-user.target
